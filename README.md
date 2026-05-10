@@ -20,9 +20,9 @@ A lightweight OSINT toolkit written in Python for gathering publicly available i
 
  GitHub
  Instagram
- X (planned)
- TikTok (planned)
- YouTube (planned)
+ X 
+ TikTok 
+ YouTube 
 
 ## Before installation(recommended):
 ```bash
