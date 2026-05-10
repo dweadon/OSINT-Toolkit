@@ -57,4 +57,21 @@ git clone git@github.com:dweadon/osint-toolkit.git
 cd osint-toolkit
 python3 main.py
 ```
+
+## if an error like this appears:
+```bash
+Traceback (most recent call last):
+  File "/home/deads/osint-toolkit/osint-toolkit/main.py", line 134, in <module>
+    user = input("Enter username: ")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd1 in position 2: invalid continuation byte
 ```
+try using:
+```bash
+PYTHONIOENCODING=utf-8 python3 main.py
+```
+or
+```bash
+export PYTHONIOENCODING=utf-8
+python3 main.py
+```
+### MADE BY DWEADON
