@@ -55,7 +55,8 @@ This project focuses on:
 > This tool is for educational and OSINT research purposes only.  
 > Do not use it for illegal or unauthorized activities.
 >
-> ## Installation
+>
+## Installation
 
 ### 1. Clone repository
 Create virtual environment (recommended)
