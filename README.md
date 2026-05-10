@@ -24,8 +24,7 @@ A lightweight OSINT toolkit written in Python for gathering publicly available i
  TikTok (planned)
  YouTube (planned)
 
-## Installation
-
+Before installation(recommended):
 ```bash
 sudo apt install python3-venv
 
@@ -50,20 +49,15 @@ This project focuses on:
  OSINT workflow automation
  Multi-source intelligence gathering
 
-> ⚠️ **Warning**
->
-> This tool is for educational and OSINT research purposes only.  
-> Do not use it for illegal or unauthorized activities.
->
->
 ## Installation
 
-### 1. Clone repository
+ 1. Clone repository
 Create virtual environment (recommended)
 python3 -m venv venv
 source venv/bin/activate
-### 2. Run the tool
+ 2. Run the tool
 python main.py
 ```bash
-git clone https://github.com/yourname/osint-toolkit.git
+git clone git@github.com:dweadon/osint-toolkit.git
 cd osint-toolkit
+```
