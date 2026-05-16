@@ -24,7 +24,7 @@ A lightweight OSINT toolkit written in Python for gathering publicly available i
  TikTok 
  YouTube 
 
-## Before installation(recommended):
+## Before installation:
 ```bash
 sudo apt install python3-venv
 
@@ -54,9 +54,16 @@ source venv/bin/activate
 python main.py
 ```bash
 git clone git@github.com:dweadon/osint-toolkit.git
-cd osint-toolkit
+cd OSINT-Toolkit
 python3 main.py
 ```
+or if ssh doesn't work try:
+```bash
+git clone https://github.com/dweadon/OSINT-Toolkit.git
+cd OSINT-Toolkit
+pyhton3 main.py
+```
+
 
 ## if an error like this appears:
 ```bash
