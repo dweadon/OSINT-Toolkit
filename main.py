@@ -14,7 +14,8 @@ print(asc)
 print("An OSINT toolkit designed to gather and analyze publicly available information from multiple online sources.\nThe project focuses on username enumeration, domain intelligence, metadata collection\nand automated investigation workflows using Python and asynchronous networking.")
 
 BASE_HEADERS = {
-    "User-Agent": "osint-toolkit-v1"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
 }
 
 def check_github(username: str, client: httpx.Client):
@@ -42,6 +43,20 @@ def check_github(username: str, client: httpx.Client):
 
     except httpx.RequestError as e:
         print(f"[#] Request error: {e}")
+def check_telegram(username: str, client: httpx.Client):
+    url = f"https://www.instagram.com/{username}"
+    try:
+        response = client.get(url, headers=BASE_HEADERS)
+        if response.status_code == 200:
+            print(f"[#] Telegram: user was possibly FOUND(200 OK): https://telegram.me/{username}")
+        elif response.status_code == 404:
+            print("[!]Telegram: user does not exists (404 NOT FOUND)")
+        elif response.status_code == 403 or response.status_code == 429:
+            print("[!] Telegram: BLOCKED / RATE LIMITED(403,429)")
+        else:
+            print("[!] Telegram: UNKNOW ERROR, TRY AGAIN")
+    except httpx.RequestError as e:
+        print(f"[!] Request error: {e}")
 
 def check_instagram(username: str, client: httpx.Client):
     url = f"https://www.instagram.com/{username}/"
@@ -121,6 +136,7 @@ def run_scan(username: str):
         print("\n[#] Starting OSINT scan...\n")
 
         check_github(username, client)
+        check_telegram(username, client)
         check_instagram(username, client)
         check_tiktok(username, client)
         check_x(username, client)
