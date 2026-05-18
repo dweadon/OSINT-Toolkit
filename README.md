@@ -1,5 +1,5 @@
 # OSINT Toolkit
-
+## v1.1 TELEGRAM CHECK ADDED!!
 A lightweight OSINT toolkit written in Python for gathering publicly available information from multiple online platforms.
 
 ## Features
